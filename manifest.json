@@ -1,0 +1,31 @@
+{
+	"name": "simple Tab",
+	"version": "1.0",
+	"description": "简洁的新标签页",
+	"manifest_version": 2,
+	"browser_action": {
+		"default_icon": "icon/icon.png",
+		"popup": "popup.html",
+		"default_title": "simple Tab"
+	},
+	"options_page": "options.html",
+	"permissions": [
+	    "http://api.wunderground.com/api/",
+	    "bookmarks",
+        "tabs",
+        "activeTab",
+        "notifications",
+        "storage"
+  	],
+  	"icons": { 
+  		"16": "icon/icon16.png",
+        "48": "icon/icon48.png",
+        "128": "icon/icon128.png" 
+    },
+  	"background": {
+        "scripts": ["js/background.js"]
+    },
+    "chrome_url_overrides": {
+        "newtab": "tab.html"
+    }
+}
